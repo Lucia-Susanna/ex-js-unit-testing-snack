@@ -4,6 +4,11 @@ function getInitials(name) {
     return nomeCompleto.map(parola => parola[0].toUpperCase()).join('')
 }
 
+
+function createSlug(parola) {
+    return parola.toLowerCase()
+}
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
