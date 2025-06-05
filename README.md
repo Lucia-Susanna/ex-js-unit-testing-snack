@@ -15,7 +15,7 @@ Creare un test che verifichi la seguente descrizione:
 
 Creare un test che verifichi la seguente descrizione:
 
-👉 "La funzione createSlug restituisce una stringa in lowercase."
+👉 "La funzione lowerCase restituisce una stringa in lowercase."
 
 
 
@@ -105,7 +105,7 @@ Creare un test che verifichi la seguente descrizione:
 
     Gli errori devono essere chiari e distinti, es. "Slug già esistente" e “Id già esistente”.
 
-    
+
 
 *🎯 Snack 10 (Bonus): createSlug() – Incrementare lo slug se esiste già*
 

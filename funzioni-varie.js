@@ -5,7 +5,7 @@ function getInitials(name) {
 }
 
 
-function createSlug(parola) {
+function lowerCase(parola) {
     return parola.toLowerCase()
 }
 
@@ -15,8 +15,13 @@ function averege(arr) {
     return somma / arr.length
 }
 
+function createSlug(frase) {
+    return frase.replaceAll(' ', '-')
+}
+
 module.exports = {
     getInitials,
-    createSlug,
-    averege
+    lowerCase,
+    averege,
+    createSlug
 }

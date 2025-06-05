@@ -1,14 +1,14 @@
-const { getInitials, createSlug, averege } = require("./funzioni-varie")
+const { getInitials, lowerCase, averege, createSlug } = require("./funzioni-varie")
 
 test('La funzione getInitials restituisce le iniziali di un nome completo.', () => {
     const initials = getInitials('Lucia Susanna');
     expect(initials).toBe('LS')
 })
 
-test('La funzione createSlug restituisce una stringa in lowercase.', () => {
-    const parolaMinuscola = createSlug('Ciao')
+test('La funzione lowerCase restituisce una stringa in lowercase.', () => {
+    const parolaMinuscola = lowerCase('Ciao')
     expect(parolaMinuscola).toBe('ciao')
-    expect(createSlug('LUCIA')).toBe('lucia')
+    expect(lowerCase('LUCIA')).toBe('lucia')
 })
 
 let numeri
@@ -21,9 +21,11 @@ afterEach(() => {
     numeri = []
 })
 
-
-
 test('La funzione average calcola la media aritmetica di un array di numeri.', () => {
     const mediaNumeri = averege(numeri)
     expect(mediaNumeri).toBe(11)
+})
+
+test('La funzione createSlug sostituisce gli spazi con -.', () => {
+    expect(createSlug('ciao come stai?')).toBe('ciao-come-stai?')
 })
