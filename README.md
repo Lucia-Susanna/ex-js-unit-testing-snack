@@ -56,7 +56,7 @@ Creare un test che verifichi la seguente descrizione:
 
 Creare un test che verifichi la seguente descrizione:
 
-👉 "La funzione createSlug lancia un errore se il titolo è vuoto o non valido."
+👉 "La funzione isNotValid lancia un errore se il titolo è vuoto o non valido."
 
 
 

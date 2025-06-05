@@ -19,9 +19,15 @@ function createSlug(frase) {
     return frase.replaceAll(' ', '-')
 }
 
+function isPalindrome(parola) {
+    const parolaAlContrario = parola.split('').reverse().join('')
+    return parola.toLowerCase() === parolaAlContrario.toLowerCase() ? true : false
+}
+
 module.exports = {
     getInitials,
     lowerCase,
     averege,
-    createSlug
+    createSlug,
+    isPalindrome
 }

@@ -1,4 +1,4 @@
-const { getInitials, lowerCase, averege, createSlug } = require("./funzioni-varie")
+const { getInitials, lowerCase, averege, createSlug, isPalindrome } = require("./funzioni-varie")
 
 test('La funzione getInitials restituisce le iniziali di un nome completo.', () => {
     const initials = getInitials('Lucia Susanna');
@@ -28,4 +28,9 @@ test('La funzione average calcola la media aritmetica di un array di numeri.', (
 
 test('La funzione createSlug sostituisce gli spazi con -.', () => {
     expect(createSlug('ciao come stai?')).toBe('ciao-come-stai?')
+})
+
+
+test('La funzione isPalindrome verifica se una stringa è un palindromo.', () => {
+    expect(isPalindrome('anna')).toBeTruthy()
 })
