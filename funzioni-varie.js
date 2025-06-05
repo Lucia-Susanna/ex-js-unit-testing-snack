@@ -33,11 +33,28 @@ function isNotValid(titolo) {
     }
 }
 
+function findPostById(array, id) {
+    if (isNaN(id)) {
+        throw new Error(`"${id}" non è un id valido`)
+    }
+    array.forEach(element => {
+        if (
+            element.id === undefined ||
+            element.title === undefined ||
+            element.slug === undefined
+        ) {
+            throw new Error('l\'array non è nel formato corretto')
+        }
+    });
+    return array.find(post => post.id === id) || null
+}
+
 module.exports = {
     getInitials,
     lowerCase,
     averege,
     createSlug,
     isPalindrome,
-    isNotValid
+    isNotValid,
+    findPostById
 }
