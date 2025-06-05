@@ -8,7 +8,15 @@ function getInitials(name) {
 function createSlug(parola) {
     return parola.toLowerCase()
 }
+
+
+function averege(arr) {
+    const somma = arr.reduce((acc, val) => acc + val, 0)
+    return somma / arr.length
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    averege
 }
