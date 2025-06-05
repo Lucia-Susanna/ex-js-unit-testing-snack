@@ -24,10 +24,20 @@ function isPalindrome(parola) {
     return parola.toLowerCase() === parolaAlContrario.toLowerCase() ? true : false
 }
 
+function isNotValid(titolo) {
+    if (
+        typeof titolo !== "string" ||
+        titolo.trim() === ""
+    ) {
+        throw new Error("Titolo non valido");
+    }
+}
+
 module.exports = {
     getInitials,
     lowerCase,
     averege,
     createSlug,
-    isPalindrome
+    isPalindrome,
+    isNotValid
 }
